@@ -1,3 +1,5 @@
+Rian Adi Putra 18.01.53.2007
+
 A Final project for my Article on Building A Facial Recognition Web App with React
 
 Clone this repo
