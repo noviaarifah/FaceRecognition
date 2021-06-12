@@ -6,7 +6,7 @@ import "./App.css";
 
 // You need to add your own API key here from Clarifai.
 const app = new Clarifai.App({
-  apiKey: "72c4b50284494934be0c5d87543c25d8",
+  apiKey: "7451cbc4d35d41ec9331d074ea79c5f3",
 });
 
 class App extends Component {
@@ -19,6 +19,7 @@ class App extends Component {
     };
   }
 
+  // this function calculate the facedetect location in the image
   calculateFaceLocation = (data) => {
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -33,6 +34,7 @@ class App extends Component {
     };
   };
 
+  /* this function display the face-detect box base on the state values */
   displayFaceBox = (box) => {
     this.setState({ box: box });
   };
@@ -46,8 +48,10 @@ class App extends Component {
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
       .then((response) =>
+       
         this.displayFaceBox(this.calculateFaceLocation(response))
       )
+      // if error exist console.log error
       .catch((err) => console.log(err));
   };
 
@@ -58,10 +62,10 @@ class App extends Component {
           onInputChange={this.onInputChange}
           onSubmit={this.onSubmit}
         />
+      
         <FaceDetect box={this.state.box} imageUrl={this.state.imageUrl} />
       </div>
     );
   }
 }
-
 export default App;

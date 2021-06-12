@@ -1,13 +1,18 @@
 import React from "react";
+// add css to style the facebox
 import "./FaceDetect.css";
+// pass the box state to the component
 
 const FaceDetect = ({ imageUrl, box }) => {
   return (
     <div className="center ma">
       <div className="absolute mt2">
+            
         <img id="inputimage" alt="" src={imageUrl} width="500px" heigh="auto" />
-        <div
+        
+      <div
           className="bounding-box"
+          
           style={{
             top: box.topRow,
             right: box.rightCol,
@@ -19,5 +24,4 @@ const FaceDetect = ({ imageUrl, box }) => {
     </div>
   );
 };
-
 export default FaceDetect;
