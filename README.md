@@ -1,8 +1,11 @@
-# RIAN ADI PUTRA 18.01.53.2007 - A3R2
+#Novia Nur Arifah
+#18.01.53.2016
+#A3R2
+#Web Service
 
 -----------------------------------------------------------------------------------------------------------------------------
 # Face Recognition Gambar di internet
-link webapp : https://face-recognition-2007.herokuapp.com/
+link webapp : https://face-recognition-novia.herokuapp.com/
 
 
 
